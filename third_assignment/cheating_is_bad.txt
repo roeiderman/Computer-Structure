@@ -1,6 +1,0 @@
-First, in address 0x0000116a, we need to change from
- je 	0x1176
-to
-jne 	0x1176
-Because at the start of the main function we put 0 in dword[var_ch], and after that we are checking if the value int this variable is 0, and in the code we are not changing it. so we they will be always equal. if they are equal we are skipping the call to the give_flag function and will never get into it.
-After the change we will get in the function and print the secret flag.
